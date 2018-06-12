@@ -59,6 +59,10 @@ class User extends Authenticatable
     }
 }
 
+public function is_favoriting($user) {
+    return false;
+}
+
  public function favorite($userId)
 {
     // confirm if already following
