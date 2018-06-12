@@ -18,6 +18,10 @@
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                     {!! Form::close() !!}
                 @endif
+                {!! Form::open(['route' => ['user.favorite', $micropost->id], 'method' => 'post']) !!}
+                    {!! Form::submit('Favorite', ['class' => 'btn btn-info btn-xs']) !!}
+                {!! Form::close() !!}
+                
             </div>
         </div>
     </li>
