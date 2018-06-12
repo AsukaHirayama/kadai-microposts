@@ -92,11 +92,11 @@ public function feed_microposts()
     }
 
 
-/*
+
 public function unfavorite($userId)
 {
     // confirming if already following
-    $exist = $this->is_unfavoriting($userId);
+    $exist = $this->is_favoriting($userId);
     // confirming that it is not you
     $its_me = $this->id == $userId;
 
@@ -110,7 +110,7 @@ public function unfavorite($userId)
         return false;
     }
 }
-*/
+
 public function is_favoriting($micropostId) {
     return $this->favoritings()->where('favorite_id', $micropostId)->exists();
 }
